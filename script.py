@@ -60,10 +60,15 @@ else:
         return os.path.join(home, "Downloads")
 
 
+def find_all_files(souce):
+    for (root, dirs, files) in os.walk(source):
+        print(files)
+
+
 def main(source):
     pass
 
 
 if __name__ == "__main__":
     source = get_download_folder()
-    print(source)
+    find_all_files(source)
