@@ -69,7 +69,7 @@ def find_all_files(source):
 
         for directory in dirs:
             dir_path = os.path.join(root, directory)
-            dir_paths.append(dir_paths)
+            dir_paths.append(dir_path)
     return dir_paths
 
 
