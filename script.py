@@ -64,7 +64,10 @@ def find_all_files(souce):
     for (root, dirs, files) in os.walk(source):
         for file in files:
             path = os.path.join(root, file)
-            print(path)
+
+        for directory in dirs:
+            dir_path = os.path.join(root, directory)
+            print(dir_path)
 
 
 def main(source):
