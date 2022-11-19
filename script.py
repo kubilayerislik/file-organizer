@@ -60,14 +60,18 @@ else:
         return os.path.join(home, "Downloads")
 
 
-def find_all_files(souce):
+def find_all_files(source):
     for (root, dirs, files) in os.walk(source):
         for file in files:
             path = os.path.join(root, file)
 
         for directory in dirs:
-            dir_path = os.path.join(root, directory)
-            print(dir_path)
+            print(directory)
+
+
+def create_dir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
 
 
 def main(source):
