@@ -62,7 +62,9 @@ else:
 
 def find_all_files(souce):
     for (root, dirs, files) in os.walk(source):
-        print(files)
+        for file in files:
+            path = os.path.join(root, file)
+            print(path)
 
 
 def main(source):
