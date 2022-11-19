@@ -66,7 +66,7 @@ def find_all_files(source):
             path = os.path.join(root, file)
 
         for directory in dirs:
-            dir_path = os.path.join("", directory)
+            dir_path = os.path.join(root, directory)
             print(dir_path)
 
 
@@ -75,9 +75,13 @@ def create_dir(path):
         os.mkdir(path)
 
 
-def get_directory_from_directory_path(paths, to_strip):
+def get_directory_from_directory_path(source, paths):
+    source_list = source.split(os.sep)
     for path in paths:
-        _, dir_name = os.path.split()
+        path_list = path.split(os.sep)
+        path_list = path_list[len(source_list)]
+        path = os.path.join(path_list)
+        print(path)
 
 
 def main(source):
