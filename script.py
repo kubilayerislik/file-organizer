@@ -61,13 +61,16 @@ else:
 
 
 def find_all_files(source):
+    paths = []
+    dir_paths = []
     for (root, dirs, files) in os.walk(source):
         for file in files:
             path = os.path.join(root, file)
 
         for directory in dirs:
             dir_path = os.path.join(root, directory)
-            print(dir_path)
+            dir_paths.append(dir_paths)
+    return dir_paths
 
 
 def create_dir(path):
@@ -90,4 +93,5 @@ def main(source):
 
 if __name__ == "__main__":
     source = get_download_folder()
-    find_all_files(source)
+    dir_paths = find_all_files(source)
+    get_directory_from_directory_path(source, dir_paths)
