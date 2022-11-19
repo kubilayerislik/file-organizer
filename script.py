@@ -66,12 +66,18 @@ def find_all_files(source):
             path = os.path.join(root, file)
 
         for directory in dirs:
-            print(directory)
+            dir_path = os.path.join("", directory)
+            print(dir_path)
 
 
 def create_dir(path):
     if not os.path.exists(path):
         os.mkdir(path)
+
+
+def get_directory_from_directory_path(paths, to_strip):
+    for path in paths:
+        _, dir_name = os.path.split()
 
 
 def main(source):
