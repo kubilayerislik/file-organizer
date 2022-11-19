@@ -79,7 +79,8 @@ def get_directory_from_path(source, paths):
     for path in paths:
         path_list = path.split(os.sep)
         path_list = path_list[len(source_list) : -1]
-        print(path_list)
+        path = os.path.join("", *path_list)
+        print(path)
 
 
 def main(source):
